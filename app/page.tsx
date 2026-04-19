@@ -86,7 +86,7 @@ export default function Home() {
             <div className="photo-card">
               <div className="photo-frame">
                 <Image
-                  src="/photo.jpeg"
+                  src="/photo.jpg"
                   alt="Photo de Papa Amath Bodian"
                   fill
                   className="photo"
