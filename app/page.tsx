@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Home() {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -19,7 +21,7 @@ export default function Home() {
           <div className="container nav">
             <div>
               <div className="logo">PAPA AMATH BODIAN</div>
-              <div className="subtitle">Portfolio personnel</div>
+              <div className="subtitle">Portfolio personnel premium</div>
             </div>
 
             <nav className="nav-links">
@@ -34,7 +36,7 @@ export default function Home() {
 
         <section className="hero container">
           <div className="hero-text">
-            <div className="badge">Étudiant en informatique • Portfolio premium</div>
+            <div className="badge">Étudiant en informatique • Site premium</div>
 
             <h1>
               Bonjour, je suis{" "}
@@ -80,7 +82,20 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-card">
+          <div className="hero-side">
+            <div className="photo-card">
+              <div className="photo-frame">
+                <Image
+                  src="/photo.jpg"
+                  alt="Photo de Papa Amath Bodian"
+                  fill
+                  className="photo"
+                  priority
+                />
+              </div>
+              <div className="photo-glow" />
+            </div>
+
             <div className="profile-card">
               <p className="small-label">Profil</p>
               <h2>Papa Amath Bodian</h2>
@@ -237,9 +252,8 @@ export default function Home() {
               <span className="contact-label">Contact</span>
               <h2>Envie d’en savoir plus sur moi ?</h2>
               <p>
-                Ce portfolio peut encore être enrichi avec ma photo, mon CV, mes
-                projets réels, mes expériences, mon GitHub, mon LinkedIn et mes
-                vraies coordonnées.
+                Ce portfolio peut encore être enrichi avec mon CV, mes projets
+                réels, mon GitHub, mon LinkedIn et mes vraies coordonnées.
               </p>
             </div>
 
@@ -249,7 +263,7 @@ export default function Home() {
                 <strong>Nom :</strong> Papa Amath Bodian
               </p>
               <p>
-                <strong>Email :</strong> paamath2002@gmail.com
+                <strong>Email :</strong> tonadresse@email.com
               </p>
               <button className="btn btn-primary full-btn">
                 Ajouter mes vraies infos
@@ -278,8 +292,8 @@ export default function Home() {
           font-family: Arial, sans-serif;
           background:
             radial-gradient(circle at top left, rgba(34, 211, 238, 0.16), transparent 28%),
-            radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.18), transparent 30%),
-            linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+            radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 30%),
+            linear-gradient(180deg, #020617 0%, #081120 40%, #020617 100%);
           position: relative;
           overflow-x: hidden;
         }
@@ -287,38 +301,38 @@ export default function Home() {
         .bg-orb {
           position: fixed;
           border-radius: 999px;
-          filter: blur(90px);
+          filter: blur(100px);
           z-index: 0;
           pointer-events: none;
         }
 
         .orb-1 {
-          width: 220px;
-          height: 220px;
-          background: rgba(34, 211, 238, 0.12);
+          width: 260px;
+          height: 260px;
+          background: rgba(34, 211, 238, 0.14);
           top: 80px;
-          left: -40px;
+          left: -50px;
         }
 
         .orb-2 {
-          width: 280px;
-          height: 280px;
+          width: 320px;
+          height: 320px;
           background: rgba(59, 130, 246, 0.12);
-          top: 40%;
-          right: -80px;
+          top: 35%;
+          right: -100px;
         }
 
         .orb-3 {
-          width: 240px;
-          height: 240px;
+          width: 260px;
+          height: 260px;
           background: rgba(255, 255, 255, 0.05);
-          bottom: 60px;
-          left: 30%;
+          bottom: 80px;
+          left: 28%;
         }
 
         .container {
           width: 100%;
-          max-width: 1150px;
+          max-width: 1180px;
           margin: 0 auto;
           padding-left: 20px;
           padding-right: 20px;
@@ -330,8 +344,8 @@ export default function Home() {
           position: sticky;
           top: 0;
           z-index: 50;
-          background: rgba(2, 6, 23, 0.72);
-          backdrop-filter: blur(14px);
+          background: rgba(2, 6, 23, 0.7);
+          backdrop-filter: blur(16px);
           border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
@@ -379,11 +393,11 @@ export default function Home() {
 
         .hero {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          gap: 40px;
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 48px;
           align-items: center;
           min-height: 92vh;
-          padding-top: 60px;
+          padding-top: 70px;
           padding-bottom: 60px;
         }
 
@@ -396,13 +410,15 @@ export default function Home() {
           color: #a5f3fc;
           font-size: 14px;
           margin-bottom: 22px;
+          box-shadow: 0 0 30px rgba(34, 211, 238, 0.08);
         }
 
         h1 {
-          font-size: clamp(42px, 7vw, 76px);
-          line-height: 1.05;
+          font-size: clamp(44px, 7vw, 82px);
+          line-height: 1.03;
           margin: 0 0 22px;
           font-weight: 800;
+          letter-spacing: -0.04em;
         }
 
         .gradient-text {
@@ -441,14 +457,14 @@ export default function Home() {
         }
 
         .btn-primary {
-          background: linear-gradient(90deg, #22d3ee, #38bdf8);
+          background: linear-gradient(90deg, #67e8f9, #38bdf8);
           color: #082f49;
           border: none;
-          box-shadow: 0 10px 30px rgba(34, 211, 238, 0.2);
+          box-shadow: 0 12px 32px rgba(56, 189, 248, 0.22);
         }
 
         .btn-secondary {
-          background: rgba(255, 255, 255, 0.04);
+          background: rgba(255, 255, 255, 0.05);
           color: white;
           border: 1px solid rgba(255, 255, 255, 0.12);
           backdrop-filter: blur(10px);
@@ -462,17 +478,18 @@ export default function Home() {
         .stats {
           margin-top: 34px;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          grid-template-columns: repeat(3, minmax(120px, 1fr));
           gap: 14px;
-          max-width: 650px;
+          max-width: 640px;
         }
 
         .stat-card {
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 24px;
-          padding: 20px;
+          padding: 22px;
           backdrop-filter: blur(12px);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
         }
 
         .stat-card h3 {
@@ -486,8 +503,45 @@ export default function Home() {
           font-size: 14px;
         }
 
-        .hero-card {
+        .hero-side {
+          display: flex;
+          flex-direction: column;
+          gap: 22px;
+        }
+
+        .photo-card {
           position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .photo-frame {
+          position: relative;
+          width: 320px;
+          height: 380px;
+          border-radius: 32px;
+          overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: rgba(255,255,255,0.04);
+          box-shadow:
+            0 30px 60px rgba(0,0,0,0.35),
+            inset 0 1px 0 rgba(255,255,255,0.05);
+          z-index: 2;
+        }
+
+        .photo {
+          object-fit: cover;
+        }
+
+        .photo-glow {
+          position: absolute;
+          width: 240px;
+          height: 240px;
+          background: rgba(34, 211, 238, 0.18);
+          filter: blur(70px);
+          bottom: -20px;
+          z-index: 1;
         }
 
         .profile-card {
@@ -542,8 +596,8 @@ export default function Home() {
         }
 
         .section {
-          padding-top: 40px;
-          padding-bottom: 40px;
+          padding-top: 44px;
+          padding-bottom: 44px;
         }
 
         .section-heading {
@@ -567,14 +621,16 @@ export default function Home() {
           font-size: clamp(30px, 4vw, 52px);
           margin: 0;
           line-height: 1.12;
+          letter-spacing: -0.03em;
         }
 
         .glass-card {
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 26px;
-          padding: 24px;
+          padding: 26px;
           backdrop-filter: blur(14px);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
         }
 
         .glass-card p {
@@ -595,8 +651,9 @@ export default function Home() {
         }
 
         .hover-card:hover {
-          transform: translateY(-4px);
+          transform: translateY(-5px);
           background: rgba(255, 255, 255, 0.07);
+          box-shadow: 0 18px 36px rgba(0,0,0,0.2);
         }
 
         .grid {
@@ -625,6 +682,7 @@ export default function Home() {
           color: #e2e8f0;
           font-weight: 700;
           transition: 0.25s ease;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
         }
 
         .skill:hover {
@@ -652,7 +710,7 @@ export default function Home() {
           display: grid;
           grid-template-columns: 1.2fr 0.8fr;
           gap: 24px;
-          padding: 28px;
+          padding: 30px;
           border-radius: 34px;
           background: linear-gradient(
             135deg,
@@ -683,7 +741,20 @@ export default function Home() {
           margin-top: 0;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 980px) {
+          .hero {
+            grid-template-columns: 1fr;
+          }
+
+          .hero-side {
+            order: -1;
+          }
+
+          .photo-frame {
+            width: 280px;
+            height: 330px;
+          }
+
           .contact-box {
             grid-template-columns: 1fr;
           }
@@ -709,6 +780,11 @@ export default function Home() {
 
           .stats {
             grid-template-columns: 1fr;
+          }
+
+          .photo-frame {
+            width: 240px;
+            height: 290px;
           }
         }
       `}</style>
