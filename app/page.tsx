@@ -50,6 +50,9 @@ export default function Home() {
             </p>
 
             <div className="hero-actions">
+              <a href="/cv.pdf" target="_blank" className="btn btn-secondary">
+  Voir mon CV
+</a>
               <button
                 className="btn btn-primary"
                 onClick={() => scrollToSection("apropos")}
