@@ -262,7 +262,7 @@ export default function Home() {
                 <strong>Nom :</strong> Papa Amath Bodian
               </p>
               <p>
-                <strong>Email :</strong> tonadresse@email.com
+                <strong>Email :</strong> paamath2002@gmail.com
               </p>
               <button className="btn btn-primary full-btn">
                 Ajouter mes vraies infos
