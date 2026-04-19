@@ -20,8 +20,7 @@ export default function Home() {
         <header className="header">
           <div className="container nav">
             <div>
-              <div className="logo">PAPA AMATH BODIAN</div>
-              <div className="subtitle">Portfolio personnel premium</div>
+              <div className="logo">Portfolio personnel premium</div>
             </div>
 
             <nav className="nav-links">
@@ -39,8 +38,8 @@ export default function Home() {
             <div className="badge">Étudiant en informatique • Site premium</div>
 
             <h1>
-              Bonjour, je suis{" "}
-              <span className="gradient-text">Papa Amath Bodian</span>
+              Bonjour,{" "}
+              <span className="gradient-text">Bienvenue sur mon site</span>
             </h1>
 
             <p className="hero-description">
